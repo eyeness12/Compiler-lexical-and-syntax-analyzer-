@@ -1,0 +1,6 @@
+program test ;
+var a , b : integer ;
+begin
+    a := 10 ;
+    readln ( b ) ;
+end .
