@@ -90,31 +90,8 @@ motcle tabSymbols[] = {
 };
 
 
-void strcopy(char ch1[], char ch2[]){
-    for (int i=0; ch2[i] != '\0'; i++){
-        ch1[i] = ch2[i];
-    }
-}
-
-void addExtendTab(mot** tab) {
-    mot* tab2 = (mot*)malloc((n + 10) * sizeof(mot));
-    for (int i = 0; i < n; i++) {
-        tab2[i] = (*tab)[i];
-    }
-    free(*tab);
-    *tab = tab2;
-}
 
 
-
-int check(char ch[]){
-    for (int i=0; i<32; i++){
-        if (strcmp(ch, tabSymbols[i]) == 0){
-            return 1;
-        }
-    }
-    return 0;
-}
 
 int UnilexId(char ch[]) {
     int i=0;
@@ -142,10 +119,7 @@ int RangerId(char ch[],mot* tab) {
         }
         printf("variable non trouvee et ajoutee a la ligne %d\n", n);
         mot newMot;
-        /*if ((sizeof(*tab)/sizeof(mot)) == n){
-            printf("tableau complet\n");
-            addExtendTab(tab);
-        }*/
+       
         strcpy(newMot.lexème, ch);
         newMot.type = 1;
         //newMot.address = *(tab[n]);
