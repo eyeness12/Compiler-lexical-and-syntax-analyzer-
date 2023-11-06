@@ -303,3 +303,16 @@ int main() {
     return 0;
 }
 
+/*
+exemple valide:
+program test;
+var a,b:integer;
+Begin
+    a:=10;
+    readln(b);
+*/
+
+/*
+exemple non valide:
+program 10
+*/
